@@ -4,7 +4,12 @@ Download the latest version of Dottie, a native macOS voice assistant powered by
 
 ## Latest Release
 
-**[Download Dottie v4.27](https://github.com/stevederico/dottie-desktop-releases/releases/latest)**
+**[Download Dottie](https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/Dottie.zip)** (v4.28)
+
+Direct download URL:
+```
+https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/Dottie.zip
+```
 
 ## Features
 
@@ -16,7 +21,7 @@ Download the latest version of Dottie, a native macOS voice assistant powered by
 
 ## Installation
 
-1. Download `Dottie-v4.27.zip` from the [latest release](https://github.com/stevederico/dottie-desktop-releases/releases/latest)
+1. [Download Dottie.zip](https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/Dottie.zip)
 2. Unzip and drag `Dottie.app` to Applications
 3. First launch: Right-click → Open (to bypass Gatekeeper)
 4. Grant microphone and accessibility permissions when prompted
