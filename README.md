@@ -1,6 +1,6 @@
 # Dottie Desktop - Releases
 
-Download the latest version of Dottie, a native macOS voice assistant powered by MLX AI.
+Download the latest version of Dottie, a native macOS voice assistant and agent.
 
 ## Latest Release
 
