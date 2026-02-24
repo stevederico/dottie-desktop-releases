@@ -4,7 +4,7 @@ Download the latest version of Dottie, a native macOS voice assistant powered by
 
 ## Latest Release
 
-**[Download Dottie](https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/Dottie.zip)** (v4.28)
+**[Download Dottie](https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/Dottie.zip)**
 
 Direct download URL:
 ```
