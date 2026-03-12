@@ -28,9 +28,6 @@ https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/
 ✅ Notarized by Apple
 ✅ Hardened Runtime enabled
 
-## Development
-
-For source code and development, visit the [main repository](https://github.com/stevederico/dottie-desktop).
 
 ## Support
 
