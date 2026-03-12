@@ -11,14 +11,6 @@ Direct download URL:
 https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/Dottie.zip
 ```
 
-## Features
-
-- 🎤 Push-to-talk dictation (Option+Space)
-- 🗣️ Voice wake word detection ("Hey Dottie")
-- 🤖 Local AI-powered TTS/STT via MLX
-- 💬 Chat interface with local LLM
-- 🎨 Audio spectrum visualization
-
 ## Installation
 
 1. [Download Dottie.zip](https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/Dottie.zip)
