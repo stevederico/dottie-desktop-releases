@@ -15,8 +15,6 @@ https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/
 
 1. [Download Dottie.zip](https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/Dottie.zip)
 2. Unzip and drag `Dottie.app` to Applications
-3. First launch: Right-click → Open (to bypass Gatekeeper)
-4. Grant microphone and accessibility permissions when prompted
 
 ## System Requirements
 
