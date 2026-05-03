@@ -24,16 +24,15 @@ https://github.com/stevederico/dottie-desktop-releases/releases/latest/download/
 
 ## Security
 
-✅ Signed with Developer ID Application
-✅ Notarized by Apple
-✅ Hardened Runtime enabled
-
+Signed with Developer ID Application
+Notarized by Apple
+Hardened Runtime enabled
 
 ## Support
 
-- 🐛 [Report a bug](https://github.com/stevederico/dottie-desktop-releases/issues)
-- 💡 [Request a feature](https://github.com/stevederico/dottie-desktop-releases/issues)
-- 📖 [View documentation](https://github.com/stevederico/dottie-desktop)
+- [Report a bug](https://github.com/stevederico/dottie-desktop-releases/issues)
+- [Request a feature](https://github.com/stevederico/dottie-desktop-releases/issues)
+- [View documentation](https://docs.dottie.ai)
 
 ---
 
