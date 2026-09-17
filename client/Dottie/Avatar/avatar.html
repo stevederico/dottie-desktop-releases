@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="avatar-version" content="6">
+    <title>Dottie Avatar</title>
+    <style>
+        :root {
+            --audio-level: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: transparent;
+        }
+        #root {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .avatar-container {
+            position: relative;
+            width: 160px;
+            height: 160px;
+        }
+        .avatar-layer {
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease-out;
+        }
+        .outer-glow {
+            width: 160px;
+            height: 160px;
+            filter: blur(30px);
+        }
+        .mid-glow {
+            width: 136px;
+            height: 136px;
+            filter: blur(20px);
+        }
+        .inner-orb {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Spinner Ring - visible during thinking */
+        .spinner-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: rgba(103, 232, 249, 0.9);
+            border-right-color: rgba(59, 130, 246, 0.6);
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%) rotate(0deg);
+            transition: opacity 0.3s ease-out;
+        }
+
+        /* Ripples - visible during speaking */
+        .ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid rgba(103, 232, 249, 0.6);
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* State: idle */
+        .state-idle .outer-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.3) 0%, transparent 70%);
+            animation: pulse-idle 3s ease-in-out infinite;
+        }
+        .state-idle .mid-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.5) 0%, transparent 70%);
+            animation: pulse-idle 3s ease-in-out infinite 0.1s;
+        }
+        .state-idle .inner-orb {
+            background: linear-gradient(135deg, #67e8f9, #3b82f6);
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+            animation: pulse-idle 3s ease-in-out infinite;
+        }
+        @keyframes pulse-idle {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.06); }
+        }
+
+        /* State: hover */
+        .state-hover .outer-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.5) 0%, transparent 70%);
+            transform: translate(-50%, -50%) scale(1.15);
+            animation: none;
+        }
+        .state-hover .mid-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.7) 0%, transparent 70%);
+            transform: translate(-50%, -50%) scale(1.15);
+            animation: none;
+        }
+        .state-hover .inner-orb {
+            background: linear-gradient(135deg, #67e8f9, #3b82f6);
+            box-shadow: 0 0 35px rgba(34, 211, 238, 0.5);
+            transform: translate(-50%, -50%) scale(1.15);
+            animation: none;
+        }
+
+        /* State: thinking - spinning ring */
+        .state-thinking .outer-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.4) 0%, transparent 70%);
+            animation: pulse-thinking 0.8s ease-in-out infinite;
+        }
+        .state-thinking .mid-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.6) 0%, transparent 70%);
+            animation: pulse-thinking 0.8s ease-in-out infinite 0.05s;
+        }
+        .state-thinking .inner-orb {
+            background: linear-gradient(135deg, #67e8f9, #3b82f6);
+            box-shadow: 0 0 30px rgba(34, 211, 238, 0.4);
+            animation: pulse-thinking 0.8s ease-in-out infinite;
+        }
+        .state-thinking .spinner-ring {
+            opacity: 1;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes pulse-thinking {
+            0%, 100% { transform: translate(-50%, -50%) scale(1.05); }
+            50% { transform: translate(-50%, -50%) scale(1.11); }
+        }
+        @keyframes spin {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* State: listening - audio-reactive */
+        .state-listening .outer-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.4) 0%, transparent 70%);
+            animation: pulse-listening 1.5s ease-in-out infinite;
+        }
+        .state-listening .mid-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.6) 0%, transparent 70%);
+            animation: pulse-listening 1.5s ease-in-out infinite 0.05s;
+        }
+        .state-listening .inner-orb {
+            background: linear-gradient(135deg, #67e8f9, #3b82f6);
+            box-shadow: 0 0 25px rgba(34, 211, 238, 0.3);
+            /* Audio-reactive scale: base scale + up to 30% growth based on audio level */
+            transform: translate(-50%, -50%) scale(calc(1 + var(--audio-level) * 0.3));
+            transition: transform 0.05s ease-out;
+            animation: none;
+        }
+        @keyframes pulse-listening {
+            0%, 100% { transform: translate(-50%, -50%) scale(1.03); }
+            50% { transform: translate(-50%, -50%) scale(1.09); }
+        }
+
+        /* State: speaking - emanating ripples */
+        .state-speaking .outer-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.45) 0%, transparent 70%);
+            animation: pulse-speaking 0.8s ease-in-out infinite;
+        }
+        .state-speaking .mid-glow {
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.6) 0%, transparent 70%);
+            animation: pulse-speaking 0.8s ease-in-out infinite 0.05s;
+        }
+        .state-speaking .inner-orb {
+            background: linear-gradient(135deg, #67e8f9, #3b82f6);
+            box-shadow: 0 0 28px rgba(34, 211, 238, 0.35);
+            animation: pulse-speaking 0.8s ease-in-out infinite;
+        }
+        .state-speaking .ripple {
+            animation: ripple-out 1.5s ease-out infinite;
+        }
+        .state-speaking .ripple-1 {
+            animation-delay: 0s;
+        }
+        .state-speaking .ripple-2 {
+            animation-delay: 0.5s;
+        }
+        .state-speaking .ripple-3 {
+            animation-delay: 1s;
+        }
+        @keyframes pulse-speaking {
+            0%, 100% { transform: translate(-50%, -50%) scale(1.05); }
+            50% { transform: translate(-50%, -50%) scale(1.11); }
+        }
+        @keyframes ripple-out {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div id="avatar" class="avatar-container state-idle">
+            <div class="avatar-layer outer-glow"></div>
+            <div class="avatar-layer mid-glow"></div>
+            <div class="avatar-layer inner-orb"></div>
+            <div class="spinner-ring"></div>
+            <div class="ripple ripple-1"></div>
+            <div class="ripple ripple-2"></div>
+            <div class="ripple ripple-3"></div>
+        </div>
+    </div>
+    <script>
+        // Current agent state
+        let currentState = 'idle';
+        const avatar = document.getElementById('avatar');
+
+        /**
+         * Sets the agent state and updates avatar visuals.
+         * Hover is now handled at the Swift/NSPanel level via NSTrackingArea.
+         * @param {string} state - One of: idle, hover, thinking, listening, speaking
+         */
+        window.setAgentState = function(state) {
+            const validStates = ['idle', 'hover', 'thinking', 'listening', 'speaking'];
+            if (!validStates.includes(state)) {
+                console.warn('Invalid agent state:', state);
+                return;
+            }
+            currentState = state;
+            avatar.className = 'avatar-container state-' + state;
+        };
+
+        /**
+         * Returns the current agent state.
+         * @returns {string} Current state
+         */
+        window.getAgentState = function() {
+            return currentState;
+        };
+
+        /**
+         * Sets the audio level for visualization.
+         * Updates CSS custom property for audio-reactive animations.
+         * @param {number} level - Audio level from 0.0 to 1.0
+         */
+        window.setAudioLevel = function(level) {
+            const clampedLevel = Math.max(0, Math.min(1, level));
+            document.documentElement.style.setProperty('--audio-level', clampedLevel);
+        };
+
+        // Plugin system: load custom avatar.js if present
+        (function() {
+            const script = document.createElement('script');
+            script.src = 'avatar.js';
+            script.onerror = function() {
+                // avatar.js not found - use default avatar (this is expected)
+            };
+            document.head.appendChild(script);
+        })();
+    </script>
+</body>
+</html>

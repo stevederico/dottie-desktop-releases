@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+
+/* Begin PBXFileReference section */
+		72109E642E12519E00AEB3B8 /* Dottie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dottie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7232AC182F261CB400D806A4 /* Exceptions for "Dottie" folder in "Dottie" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 72109E632E12519E00AEB3B8 /* Dottie */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		72109E662E12519E00AEB3B8 /* Dottie */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7232AC182F261CB400D806A4 /* Exceptions for "Dottie" folder in "Dottie" target */,
+			);
+			path = Dottie;
+			sourceTree = "<group>";
+		};
+		72109E742E12520100AEB3B8 /* gateway */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ../gateway;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72109E612E12519E00AEB3B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72109E5B2E12519E00AEB3B8 = {
+			isa = PBXGroup;
+			children = (
+				72109E662E12519E00AEB3B8 /* Dottie */,
+				72109E742E12520100AEB3B8 /* gateway */,
+				72109E652E12519E00AEB3B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72109E652E12519E00AEB3B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72109E642E12519E00AEB3B8 /* Dottie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72109E632E12519E00AEB3B8 /* Dottie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72109E702E12519F00AEB3B8 /* Build configuration list for PBXNativeTarget "Dottie" */;
+			buildPhases = (
+				72109E602E12519E00AEB3B8 /* Sources */,
+				72109E612E12519E00AEB3B8 /* Frameworks */,
+				72109E622E12519E00AEB3B8 /* Resources */,
+					72109E762E12520200AEB3B8 /* Copy Resources */,
+				72109E752E12520200AEB3B8 /* Set Script Permissions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				72109E662E12519E00AEB3B8 /* Dottie */,
+			);
+			name = Dottie;
+			packageProductDependencies = (
+			);
+			productName = Dottie;
+			productReference = 72109E642E12519E00AEB3B8 /* Dottie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72109E5C2E12519E00AEB3B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					72109E632E12519E00AEB3B8 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+				};
+			};
+			buildConfigurationList = 72109E5F2E12519E00AEB3B8 /* Build configuration list for PBXProject "Dottie" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72109E5B2E12519E00AEB3B8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 72109E652E12519E00AEB3B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72109E632E12519E00AEB3B8 /* Dottie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72109E622E12519E00AEB3B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72109E752E12520200AEB3B8 /* Set Script Permissions */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Set Script Permissions";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# Set executable permissions on shell scripts\nif [ -d \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources/gateway\" ]; then\n    chmod +x \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources/gateway/scripts\"/*.sh\n    echo \"Set executable permissions on shell scripts\"\nfi\n";
+		};
+		72109E762E12520200AEB3B8 /* Copy Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -eo pipefail\n# Copy scripts to app bundle\necho \"[BUNDLE] Copying scripts to app bundle...\"\n\n# Set up paths\nRESOURCES_DIR=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources\"\nGATEWAY_SOURCE=\"$SRCROOT/../gateway\"\n\n# Create Resources directory if it doesn't exist\nmkdir -p \"$RESOURCES_DIR\"\n\n# Copy scripts directory, excluding node_modules, cargo target dirs, and dev helpers\nif [ -d \"$GATEWAY_SOURCE\" ]; then\n    echo \"[BUNDLE] Copying gateway directory...\"\n    rsync -a --exclude='node_modules' --exclude='test_*.sh' --exclude='validate_*.sh' --exclude='target' --exclude='.cargo' --exclude='.bundle-staging' --exclude='.env' --exclude='.env.*' \"$GATEWAY_SOURCE/\" \"$RESOURCES_DIR/gateway/\"\nelse\n    echo \"[ERROR] Gateway source directory not found: $GATEWAY_SOURCE\"\n    exit 1\nfi\n\n# Copy node_modules for Node.js services that need them\n# Use -aL to dereference symlinks (avoids sealed resource errors from broken symlinks)\nfor SERVICE in dottie-talk dottie-mac-use; do\n    if [ -d \"$GATEWAY_SOURCE/$SERVICE/node_modules\" ]; then\n        echo \"[BUNDLE] Copying node_modules for $SERVICE (dereferencing symlinks)...\"\n        rsync -aL \"$GATEWAY_SOURCE/$SERVICE/node_modules/\" \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/\" || { echo \"[ERROR] node_modules rsync failed (exit $?)\"; exit 1; }\n        # Remove .bin directory (CLI tools not needed at runtime, avoids signing issues)\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/.bin\"\n        # Remove dev dependencies with native binaries (fail notarization without Hardened Runtime)\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/@esbuild\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/esbuild\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/vite\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/@vitejs\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/vitest\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/@vitest\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/@rollup\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/rolldown\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/@rolldown\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/lightningcss\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/lightningcss-darwin-arm64\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/playwright\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/playwright-core\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/.deno\"\n        # Vitest/chai orphan tree (left behind after vitest root is deleted)\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/chai\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/loupe\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/pathval\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/check-error\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/deep-eql\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/assertion-error\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/get-func-name\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/tinypool\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/tinyrainbow\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/why-is-node-running\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/siginfo\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/stackback\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/std-env\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/tinybench\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/tinyexec\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/tinyspy\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/expect-type\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/estree-walker\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/magic-string\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/postcss\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/source-map-js\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/nanoid\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/picocolors\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/fdir\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/picomatch\"\n        rm -rf \"$RESOURCES_DIR/gateway/$SERVICE/node_modules/tinyglobby\"\n        # Production-only tree: drop anything not required by package.json deps\n        if [ -f \"$RESOURCES_DIR/gateway/$SERVICE/package.json\" ] && command -v npm >/dev/null 2>&1; then\n            echo \"[BUNDLE] npm prune --omit=dev for $SERVICE...\"\n            (cd \"$RESOURCES_DIR/gateway/$SERVICE\" && npm prune --omit=dev --ignore-scripts) || echo \"[WARN] npm prune failed ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ continuing with explicit strip\"\n        fi\n    fi\ndone\n\n# Defensive sweeps: strip anything that should not ship to users\nfind \"$RESOURCES_DIR/gateway\" -type d -name target -prune -exec rm -rf {} + 2>/dev/null || true\nfind \"$RESOURCES_DIR/gateway\" -type d -name __tests__ -prune -exec rm -rf {} + 2>/dev/null || true\nfind \"$RESOURCES_DIR/gateway\" -type d -name test -prune -exec rm -rf {} + 2>/dev/null || true\nfind \"$RESOURCES_DIR/gateway\" -type d -name tests -prune -exec rm -rf {} + 2>/dev/null || true\nfind \"$RESOURCES_DIR/gateway\" -type d -name .github -prune -exec rm -rf {} + 2>/dev/null || true\nfind \"$RESOURCES_DIR/gateway\" -type f -name .DS_Store -delete 2>/dev/null || true\nfind \"$RESOURCES_DIR/gateway\" -type f \\( -name '*.test.js' -o -name '*.test.mjs' -o -name '*.test.ts' -o -name '*.spec.js' \\) -delete 2>/dev/null || true\n\n# Customer-facing app: strip non-runtime leftovers\nrm -rf \"$RESOURCES_DIR/gateway/patches\"\nrm -rf \"$RESOURCES_DIR/gateway/agent_service\"\n# Drop build-only scripts (install_* / smoke / node bundle) ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ only start_gateway is runtime\nrm -f \"$RESOURCES_DIR/gateway/scripts/install_bridge_model.sh\" 2>/dev/null || true\nrm -f \"$RESOURCES_DIR/gateway/scripts/install_parakeet_bundle.sh\" 2>/dev/null || true\nrm -f \"$RESOURCES_DIR/gateway/scripts/build_node_bundle.sh\" 2>/dev/null || true\nrm -f \"$RESOURCES_DIR/gateway/scripts/smoke_test_release.sh\" 2>/dev/null || true\nrm -f \"$RESOURCES_DIR/gateway/scripts/stop_gateway.sh\" 2>/dev/null || true\nrm -f \"$RESOURCES_DIR/gateway/scripts/reset.sh\" 2>/dev/null || true\n\n# Assert talk/mac-use runtime deps landed in the bundle (root gateway is Rust — no node_modules).\nMISSING_DEPS=\"\"\nfor SERVICE in dottie-talk dottie-mac-use; do\n    PKG=\"$GATEWAY_SOURCE/$SERVICE/package.json\"\n    NMODS=\"$RESOURCES_DIR/gateway/$SERVICE/node_modules\"\n    [ -f \"$PKG\" ] || continue\n    for DEP in $(sed -n '/\"dependencies\"/,/}/p' \"$PKG\" | sed -n 's/^ *\"\\([^\"]*\\)\": *\".*/\\1/p'); do\n        [ -d \"$NMODS/$DEP\" ] || MISSING_DEPS=\"$MISSING_DEPS $SERVICE/$DEP\"\n    done\ndone\nif [ -n \"$MISSING_DEPS\" ]; then\n    echo \"[ERROR] Declared talk/mac-use dependencies missing from bundle:$MISSING_DEPS\"\n    exit 1\nfi\n\n# Copy avatar.html for WebView avatar\nif [ -f \"$SRCROOT/Dottie/Avatar/avatar.html\" ]; then\n    echo \"[BUNDLE] Copying avatar.html...\"\n    cp \"$SRCROOT/Dottie/Avatar/avatar.html\" \"$RESOURCES_DIR/avatar.html\"\nfi\n\n# Galaxy AgentOrb (WebGL) ÃÂ¢ÃÂÃÂ Settings ÃÂ¢ÃÂÃÂ Avatar ÃÂ¢ÃÂÃÂ Galaxy Orb\nif [ -f \"$SRCROOT/Dottie/Avatar/agent-orb.html\" ]; then\n    echo \"[BUNDLE] Copying agent-orb.html...\"\n    cp \"$SRCROOT/Dottie/Avatar/agent-orb.html\" \"$RESOURCES_DIR/agent-orb.html\"\nfi\n\n# Copy espeak-ng-data for koko TTS phonemization. Without it, on machines\n# lacking brew espeak-ng, every synthesis silently truncates to ~0.5s of\n# noise (supervisor.js findEspeakData checks Resources/espeak-ng-data first).\nif [ -d \"$GATEWAY_SOURCE/dottie-talk/bin/espeak-ng-data\" ]; then\n    echo \"[BUNDLE] Copying espeak-ng-data...\"\n    rsync -a --delete \"$GATEWAY_SOURCE/dottie-talk/bin/espeak-ng-data/\" \"$RESOURCES_DIR/espeak-ng-data/\"\nelse\n    echo \"[ERROR] espeak-ng-data not found at $GATEWAY_SOURCE/dottie-talk/bin/espeak-ng-data ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ koko TTS would be broken for users\"\n    exit 1\nfi\n\n# Set executable permissions on shell scripts\necho \"[BUNDLE] Setting executable permissions on shell scripts...\"\nchmod +x \"$RESOURCES_DIR/gateway/scripts\"/*.sh\n\n# Build + stage parakeet.cpp's parakeet-server into source bin/ (idempotent + cached).\necho \"[BUNDLE] Ensuring talk bins (parakeet + koko) via install_bins.sh...\"\n\"$GATEWAY_SOURCE/dottie-talk/scripts/install_bins.sh\" \"$GATEWAY_SOURCE/dottie-talk/bin\" || { echo \"[ERROR] parakeet bundle staging failed\"; exit 1; }\n\n# Copy inference binaries (parakeet-server, koko + espeak-ng-data)\nBIN_SOURCE=\"$GATEWAY_SOURCE/dottie-talk/bin\"\nBIN_DEST=\"$RESOURCES_DIR/bin\"\nif [ -d \"$BIN_SOURCE\" ]; then\n    echo \"[BUNDLE] Copying inference binaries...\"\n    rm -rf \"$BIN_DEST\"\n    mkdir -p \"$BIN_DEST\"\n    # cp -a preserves symlinks; resolving them would double the bundle.\n    cp -a \"$BIN_SOURCE\"/* \"$BIN_DEST/\"\n    rm -rf \"$BIN_DEST/espeak-ng-data\"   # bundled separately at Resources/espeak-ng-data; avoid dup\n    rm -rf \"$BIN_DEST/models\"           # bridge GGUF removed; no weights in bin/\n    chmod +x \"$BIN_DEST\"/* 2>/dev/null || true\n    # Re-sign with hardened runtime so notarization accepts the bundle.\n    # Ad-hoc/linker-signed binaries from Rust builds lack the runtime flag.\n    if [ -n \"$EXPANDED_CODE_SIGN_IDENTITY\" ]; then\n        echo \"[BUNDLE] Signing binaries with Hardened Runtime ($EXPANDED_CODE_SIGN_IDENTITY_NAME)...\"\n        TS_ARG=\"\"\n        if [ \"$CONFIGURATION\" = \"Release\" ]; then TS_ARG=\"--timestamp\"; else TS_ARG=\"--timestamp=none\"; fi\n        for BIN in \"$BIN_DEST\"/*; do\n            [ -f \"$BIN\" ] || continue\n            # Skip symlinks ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ codesign would follow them and re-sign the\n            # already-signed target. The real files get signed via their\n            # own glob iteration.\n            [ -L \"$BIN\" ] && continue\n            # All bundled binaries (parakeet-server, koko) need\n            # `disable-library-validation` because they ship with ad-hoc /\n            # linker-signed dylibs (ONNX Runtime's libonnxruntime* if present,\n            # espeak-ng-data) that fail Hardened Runtime's library validation under\n            # our Developer ID without this entitlement. Without it the kernel emits\n            # \\\"load code signature error 2\\\" and SIGKILLs the binary on exec.\n            codesign --force --options runtime $TS_ARG --entitlements \"$SRCROOT/Dottie/inference.entitlements\" --sign \"$EXPANDED_CODE_SIGN_IDENTITY\" \"$BIN\" || exit 1\n        done\n    else\n        echo \"[WARN] No code signing identity ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ skipping Hardened Runtime (will fail notarization)\"\n    fi\n    echo \"[BUNDLE] Binaries: $(ls \"$BIN_DEST\" | wc -l | tr -d ' ') files\"\nelse\n    echo \"[WARN] No bin/ directory found ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ inference binaries not bundled\"\nfi\n\n# Verify the copy was successful\nif [ -f \"$RESOURCES_DIR/gateway/scripts/start_gateway.sh\" ]; then\n    echo \"[BUNDLE] ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Scripts successfully bundled!\"\n    echo \"[BUNDLE] Scripts: $(ls \"$RESOURCES_DIR/gateway/scripts\"/*.sh 2>/dev/null | wc -l | tr -d ' ') shell scripts\"\nelse\n    echo \"[ERROR] ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Failed to bundle scripts properly\"\n    exit 1\nfi\n\n# Sign native Mach-O bundles in gateway/node_modules (fsevents.node etc.) ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ npm-shipped\n# precompiled binaries are ad-hoc/linker-signed which Apple notary rejects, so re-sign with our\n# Developer ID + hardened runtime. Same TS_ARG logic as bin/ signing above (Release adds --timestamp).\nif [ -n \"$EXPANDED_CODE_SIGN_IDENTITY\" ]; then\n    NMODS=\"$RESOURCES_DIR/gateway/node_modules\"\n    if [ -d \"$NMODS\" ]; then\n        NM_TS_ARG=\"\"\n        if [ \"$CONFIGURATION\" = \"Release\" ]; then NM_TS_ARG=\"--timestamp\"; else NM_TS_ARG=\"--timestamp=none\"; fi\n        echo \"[BUNDLE] Signing native Mach-O in node_modules...\"\n        NM_COUNT=0\n        while IFS= read -r f; do\n            if file --brief --mime-type \"$f\" 2>/dev/null | grep -q '^application/x-mach-binary'; then\n                codesign --force --options runtime $NM_TS_ARG --sign \"$EXPANDED_CODE_SIGN_IDENTITY\" \"$f\" || exit 1\n                NM_COUNT=$((NM_COUNT+1))\n            fi\n        done < <(find \"$NMODS\" -type f \\( -name '*.node' -o -name '*.dylib' \\) 2>/dev/null)\n        echo \"[BUNDLE] Signed $NM_COUNT native Mach-O in node_modules\"\n    fi\nfi\n\n# Build embedded Node binary (signed with V8 JIT entitlements)\necho \"[BUNDLE] Building Node bundle to $RESOURCES_DIR/node...\"\n\"$GATEWAY_SOURCE/scripts/build_node_bundle.sh\" \"$RESOURCES_DIR/node\" || { echo \"[ERROR] Node bundle failed\"; exit 1; }\n# Headers/docs never needed at runtime (~60MB); also handled in build_node_bundle.sh\nrm -rf \"$RESOURCES_DIR/node/include\" \"$RESOURCES_DIR/node/share\" 2>/dev/null || true\n\n# SECURITY: fail the build if any .env or credential file ended up in the bundle.\n# v2026.5.9.1 shipped a real .env because the rsync had no .env exclude AND the deploy zip\n# step dereferenced the Dropbox symlink. This is the final backstop ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ even if a future change\n# defeats the rsync exclude or someone adds a new copy phase, this catches it.\nLEAKED_FILES=$( { find \"$RESOURCES_DIR\" \\( -name '.env' -o -name '.env.*' -o -name 'credentials.json' \\) 2>/dev/null; find \"$RESOURCES_DIR\" -name '.npmrc' -size +0c 2>/dev/null; } )\nif [ -n \"$LEAKED_FILES\" ]; then\n    echo \"[ERROR] Secret-bearing file(s) found in bundle ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ refusing to ship:\"\n    echo \"$LEAKED_FILES\"\n    exit 1\nfi\n\necho \"[BUNDLE] Bundle script completed successfully!\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72109E602E12519E00AEB3B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+
+/* Begin XCBuildConfiguration section */
+		72109E6E2E12519F00AEB3B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		72109E6F2E12519F00AEB3B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		72109E712E12519F00AEB3B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dottie/Dottie.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = YES;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = YES;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = YES;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dottie/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Dottie;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 2026.9.17.62;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.dottie";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Dottie/Dottie-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 2.4;
+			};
+			name = Debug;
+		};
+		72109E722E12519F00AEB3B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dottie/Dottie.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = YES;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = YES;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = YES;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dottie/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Dottie;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 2026.9.17.62;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.dottie";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Dottie/Dottie-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 2.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72109E5F2E12519E00AEB3B8 /* Build configuration list for PBXProject "Dottie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72109E6E2E12519F00AEB3B8 /* Debug */,
+				72109E6F2E12519F00AEB3B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72109E702E12519F00AEB3B8 /* Build configuration list for PBXNativeTarget "Dottie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72109E712E12519F00AEB3B8 /* Debug */,
+				72109E722E12519F00AEB3B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72109E5C2E12519E00AEB3B8 /* Project object */;
+}

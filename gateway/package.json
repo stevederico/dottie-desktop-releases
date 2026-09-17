@@ -1,0 +1,11 @@
+{
+  "name": "dottie-agent-service",
+  "version": "1.0.0",
+  "description": "Dottie local gateway (:1317) — Rust binary; talk/mac-use remain Node children",
+  "private": true,
+  "scripts": {
+    "build": "cargo build --release && mkdir -p bin && cp target/release/dottie-gateway bin/dottie-gateway",
+    "start": "cargo run --release",
+    "test": "cargo test"
+  }
+}

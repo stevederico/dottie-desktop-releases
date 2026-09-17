@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleShortVersionString</key>
+	<string>2026.9.17.62</string>
+	<key>CFBundleVersion</key>
+	<string>2026.9.17.62</string>
+	<key>LSUIElement</key>
+	<false/>
+	<key>NSAccessibilityUsageDescription</key>
+	<string>Dottie needs Accessibility access to position the voice indicator at your text cursor while dictating and to read selected text.</string>
+	<key>NSAudioCaptureUsageDescription</key>
+	<string>Dottie lowers the volume of other apps' audio while you dictate or while Dottie is speaking, so you can hear it clearly.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Dottie needs access to your calendar to help you manage events and provide schedule information.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Dottie needs access to your contacts to provide personalized assistance and answer questions about your contacts.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Dottie needs location access to provide location-based services, weather information, and address lookup functionality.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Dottie needs location access to provide location-based services, weather information, and address lookup functionality.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Dottie needs microphone access to record voice for speech-to-text transcription.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Dottie needs access to your reminders to help you manage tasks and provide reminder information.</string>
+	<key>NSScreenCaptureUsageDescription</key>
+	<string>Dottie uses Screen Recording to capture system audio in Listen Mode so it can transcribe what you're hearing and research topics live.</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Dottie: Speak Text</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>generateAudioFromService</string>
+			<key>NSPortName</key>
+			<string>Dottie</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+				<string>public.utf8-plain-text</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Dottie: Stop Speaking</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>stopAudioFromService</string>
+			<key>NSPortName</key>
+			<string>Dottie</string>
+		</dict>
+	</array>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Dottie uses speech recognition for wake word detection and voice commands.</string>
+</dict>
+</plist>

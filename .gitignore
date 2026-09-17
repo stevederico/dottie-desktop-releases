@@ -1,0 +1,68 @@
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+DerivedData/
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Keep shared project files
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+
+# Rust gateway
+target/
+gateway/bin/
+.bundle-staging/
+
+# Node (talk / mac-use)
+node_modules/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.mobileprovision
+AuthKey*.p8
+credentials*
+**/Release.xcconfig
+
+# Runtime / local junk (real runtime is ~/.dottie/)
+.dottie/
+*.tmp
+*.temp
+*.profraw
+
+# IDE / agents
+.vscode/
+.idea/
+.cursor/
+.agent-browser/
+
+# Local model / weight downloads (not in git)
+models/
+checkpoints/
+data/
+
+# Build / ship artifacts (Release assets only — never in tree)
+releases/
+*.app
+*.dmg
+*.zip
+*.pkg

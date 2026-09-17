@@ -1,0 +1,18 @@
+[package]
+name = "dottie-gateway"
+version = "1.0.0"
+edition = "2021"
+description = "Dottie local gateway (:1317) — zero crates, system libs only"
+
+[[bin]]
+name = "dottie-gateway"
+path = "src/main.rs"
+
+[dependencies]
+# Zero crates — intentionally empty.
+# Link system libs in build.rs / rustc-link-lib: sqlite3, curl (macOS).
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

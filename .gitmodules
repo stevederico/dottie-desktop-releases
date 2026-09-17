@@ -1,0 +1,6 @@
+[submodule "gateway/dottie-mac-use"]
+	path = gateway/dottie-mac-use
+	url = https://github.com/stevederico/dottie-mac-use.git
+[submodule "gateway/dottie-talk"]
+	path = gateway/dottie-talk
+	url = https://github.com/stevederico/dottie-talk.git
