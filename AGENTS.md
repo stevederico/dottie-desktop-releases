@@ -7,7 +7,7 @@ Guidance for humans and coding agents working in this repository.
 Dottie is a native macOS AI voice assistant (bundle ID `com.example.dottie`).  
 Swift app + local Rust gateway. Chat defaults to **Dottie Pro** / Grok; optional BYOK clouds, **Ollama**, or **Dottie Local**. Local STT (`parakeet-server`) + TTS (`koko`) stay on-device.
 
-Public source + Release zips live in this repo (`stevederico/dottie-desktop-releases`).
+Public home for scrubbed source + Release zips (`stevederico/dottie-desktop-releases`).
 
 ## Docs (read these)
 
@@ -69,7 +69,7 @@ User config: `~/.dottie/config.json`. Logs: `~/.dottie/logs/`.
 - **Signing plists:** App = `Dottie.entitlements`. Nested bins = `inference.entitlements` / `EmbeddedRuntime.entitlements` (same `Dottie/` folder).
 - **Gateway:** Rust `std` + system `libsqlite3` / `libcurl`. Use `log` module. No crates.io deps.
 - **Talk / mac-use:** Node façades supervised by the gateway. Tool failures logged in wrapExecute — don’t sprinkle per-tool catch logs.
-- **Secrets:** Never commit `.env`, tokens, or API keys. Runtime secrets live under `~/.dottie/`, not in the repo.
+- **Secrets:** Never commit `.env`, tokens, or API keys. Runtime secrets live under `~/.dottie/`, not in the repo. Local scratch: `private/` (gitignored except `private/README.md`).
 - **Scope:** Smallest change that fixes the ask. No drive-by refactors.
 - **Tests:** `cargo test` under `gateway/`; Swift tests under `client/DottieTests/` when present.
 

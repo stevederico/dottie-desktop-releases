@@ -43,6 +43,10 @@ AuthKey*.p8
 credentials*
 **/Release.xcconfig
 
+# Local-only files (never publish). README is tracked so the folder exists in clones.
+/private/**
+!/private/README.md
+
 # Runtime / local junk (real runtime is ~/.dottie/)
 .dottie/
 *.tmp
