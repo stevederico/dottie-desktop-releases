@@ -1,0 +1,6 @@
+// Public defaults. Optional local overrides via gitignored Release.xcconfig.
+DEVELOPMENT_TEAM =
+PRODUCT_BUNDLE_IDENTIFIER = com.example.dottie
+
+// Setup: cp Release.xcconfig.example Release.xcconfig
+#include? "Release.xcconfig"

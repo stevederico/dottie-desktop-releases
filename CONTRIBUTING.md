@@ -34,6 +34,8 @@ Health check: `curl -s http://127.0.0.1:1317/health`
 
 Signing plists for the app and nested binaries live under `client/Dottie/`.
 
+Local Apple Team ID (optional): `cp client/Release.xcconfig.example client/Release.xcconfig` and edit — that file is gitignored.
+
 ## Tests
 
 ```bash

@@ -65,7 +65,8 @@ User config: `~/.dottie/config.json`. Logs: `~/.dottie/logs/`.
 - **UI:** Match existing SwiftUI patterns (SF system font). Orb is the hero; no decorative card/glow sprawl.
 - **Swift:** Prefer existing patterns (`GatewayClient`, `RealtimeClient`, `AppLogger`). No raw `print` / `NSLog` on failure paths.
 - **ObjC bridge (`client/Dottie/ObjC/`):** Keep. `DTTryBlock` catches AVFoundation `NSException`s (`installTap` / `scheduleBuffer`) that Swift `do/catch` cannot — without it those throws SIGABRT. Bridging header: `Dottie-Bridging-Header.h`. Call sites: `AudioTapInstaller`, `RealtimeClient+AudioPlayback`. Do not delete as “odd exception.”
-- **Signing plists:** App = `Dottie.entitlements`. Nested bins = `inference.entitlements` / `EmbeddedRuntime.entitlements` (same `Dottie/` folder). Keep `DEVELOPMENT_TEAM` empty in the shared project; real Team ID / bundle ID stay local or private-only for notarize.
+- **Signing:** Shared defaults in `client/Signing.xcconfig` (`com.example.dottie`, empty Team). Local overrides: `cp client/Release.xcconfig.example client/Release.xcconfig` (gitignored). Never commit `Release.xcconfig`.
+- **Signing plists:** App = `Dottie.entitlements`. Nested bins = `inference.entitlements` / `EmbeddedRuntime.entitlements` (same `Dottie/` folder).
 - **Gateway:** Rust `std` + system `libsqlite3` / `libcurl`. Use `log` module. No crates.io deps.
 - **Talk / mac-use:** Node façades supervised by the gateway. Tool failures logged in wrapExecute — don’t sprinkle per-tool catch logs.
 - **Secrets:** Never commit `.env`, tokens, or API keys. Runtime secrets live under `~/.dottie/`, not in the repo.

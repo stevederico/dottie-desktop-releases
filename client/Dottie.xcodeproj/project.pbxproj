@@ -9,6 +9,7 @@
 
 /* Begin PBXFileReference section */
 		72109E642E12519E00AEB3B8 /* Dottie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dottie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A11C012F6A000100D0C001 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -51,6 +52,7 @@
 		72109E5B2E12519E00AEB3B8 = {
 			isa = PBXGroup;
 			children = (
+				72A11C012F6A000100D0C001 /* Signing.xcconfig */,
 				72109E662E12519E00AEB3B8 /* Dottie */,
 				72109E742E12520100AEB3B8 /* gateway */,
 				72109E652E12519E00AEB3B8 /* Products */,
@@ -313,6 +315,7 @@
 		};
 		72109E712E12519F00AEB3B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72A11C012F6A000100D0C001 /* Signing.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,8 +324,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
@@ -353,7 +354,6 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 2026.9.17.62;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.dottie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				REGISTER_APP_GROUPS = YES;
@@ -369,6 +369,7 @@
 		};
 		72109E722E12519F00AEB3B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72A11C012F6A000100D0C001 /* Signing.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -377,8 +378,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
@@ -409,7 +408,6 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 2026.9.17.62;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.dottie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				REGISTER_APP_GROUPS = YES;
