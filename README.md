@@ -4,7 +4,7 @@
   </a>
   <h1 style="border-bottom: none; margin-bottom: 0;">Dottie</h1>
   <h3 style="margin-top: 0; font-weight: normal;">
-    a native macos voice assistant - rust gateway, on-device speech, grok by default
+    desktop voice assistant - rust gateway, on-device speech, grok by default
   </h3>
   <p>
     <a href="https://www.dottie.ai"><strong>Website</strong></a>
